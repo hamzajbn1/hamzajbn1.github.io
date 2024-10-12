@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        span.highlight {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p { background-color: Lightgreen;
+               margin-bottom: .3em;
+               font-family:  helvetica, sans-serif; }
+
+        div {
+            background-color: lightgreen;
+            width: 470px;
+            border: 20px dotted lightblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /*"media" we can change some of the content*/
+        /*when I Shrink the screen until it be 1000px or less than that, the condition inside the media will work*/
+        @media(max-width: 1000px){
+            div{
+                background-color: rgb(225, 154, 77) 
+            }
+        }
+        
+        /*the condition of "print" will apear only when we want to print*/
+        @media print{
+            span.highlight{
+                display:none;
+            }
+        }
+    </style>
+    <title>Span Example</title>
+</head>
+<body>
+    <h5>This is a normal paragraph, but this <span class="highlight">text is highlighted</span> using CSS.</h5>
+
+    <hr>
+
+    <!--what we put in percent will be effect when we Shrink the screen-->
+    <p style = "width: 30%;">stretch to span 30 percent of the screen width</p>
+
+      <p style = "width: 90%; text-align: center;">
+         stretch to span 30 percent of the screen width & center aligned.</p>
+
+      <!--"overflow" will make what we see, when we Shrink the screen we can have the real benifit from it, The content doesn't 
+      go outside the box renders outside the element's box-->
+      <!--"overflow" difintion will be in chapter4(46)-->
+      <p style = "width: 15%; height: 150px; overflow: scroll;">
+      span only 30 percent of the screen width in case of overflow apply scroll.
+         </p>
+
+    <hr>
+         <!--"padding" is the distance between the sentence and the design of the border-->
+         <!--"border" is the size of the dotted-->
+         <!--"margin" is the distance between the box and the other things in the web-->
+         <h2>CSS Box Model</h2>
+
+         <p>UNIBO CS Department</p>
+         
+         <div>A degree programme in Computer Science aims to ensure that graduates have a solid 
+            grounding in the subject, ready for further refinement in a second-cycle degree programme and/or a first-level
+            University Masters. A Computer Science graduate needs to have a flexible open-minded approach geared to problem-solving,
+             and swift assimilation of innovative methods and techniques.</div>
+</body>
+</html>
